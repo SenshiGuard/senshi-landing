@@ -1,67 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" class="senshi-guard-logo">
   <defs>
-    <!-- Cyber Crimson Neon Glow Filters -->
-    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur1" />
-      <feGaussianBlur stdDeviation="14" result="blur2" />
+    <!-- Vibrant Cyber Red / Coral Linear Gradient -->
+    <linearGradient id="senshiNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B8B" />
+      <stop offset="50%" stop-color="#FF2A5F" />
+      <stop offset="100%" stop-color="#D91448" />
+    </linearGradient>
+
+    <!-- Crisp Subtle Neon Glow -->
+    <filter id="crispGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
       <feMerge>
-        <feMergeNode in="blur2" />
-        <feMergeNode in="blur1" />
-        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <!-- Neon Gradients -->
-    <linearGradient id="neonCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF5C8A" />
-      <stop offset="50%" stop-color="#FF2A5F" />
-      <stop offset="100%" stop-color="#E11D48" />
-    </linearGradient>
-
-    <linearGradient id="katanaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF2A5F" />
-      <stop offset="100%" stop-color="#FFA8C2" />
-    </linearGradient>
   </defs>
 
-  <!-- Group with Neon Filter & Cyber Red Lines -->
-  <g stroke="url(#neonCrimson)" stroke-linecap="round" stroke-linejoin="round" filter="url(#neonGlow)">
+  <!-- Master Ultra-Thin Line Art Group -->
+  <g stroke="url(#senshiNeon)" stroke-linecap="round" stroke-linejoin="round" filter="url(#crispGlow)">
     
-    <!-- 1. DIAGONAL KATANA BLADE (Crossed behind shield) -->
-    <path d="M 330 145 L 410 75 L 395 65 L 320 130" stroke-width="6" fill="none" />
-    <path d="M 175 355 L 105 425 L 90 415 L 160 345" stroke-width="6" fill="none" />
-    <line x1="95" y1="410" x2="115" y2="430" stroke-width="5" />
+    <!-- 1. DIAGONAL KATANA (Crossed behind shield) -->
+    <path d="M 335 125 L 415 65 L 395 50 L 315 110" stroke-width="3" fill="#0C101A" fill-opacity="0.8" />
+    <line x1="330" y1="115" x2="400" y2="60" stroke-width="1.5" opacity="0.7"/>
 
-    <!-- 2. BACKGROUND SHIELD (Outer Protective Frame) -->
-    <path d="M 175 140 L 250 95 L 325 140 L 325 240 L 250 375 L 175 240 Z" stroke-width="8" fill="#0A0E17" fill-opacity="0.85" />
-    <path d="M 195 155 L 250 120 L 305 155 L 305 230 L 250 345 L 195 230 Z" stroke-width="4" fill="none" opacity="0.6" />
-    <line x1="250" y1="120" x2="250" y2="345" stroke-width="4" opacity="0.7" />
+    <path d="M 185 390 L 105 450 L 85 435 L 165 375" stroke-width="3" fill="#0C101A" fill-opacity="0.8" />
+    <line x1="90" y1="430" x2="110" y2="455" stroke-width="2.5" />
 
-    <!-- 3. SAMURAI KABUTO (Kuwagata Horns - Upward V-flare) -->
-    <path d="M 235 210 L 155 90 L 190 120 L 220 185" stroke-width="8" fill="#0A0E17" fill-opacity="0.9" />
-    <path d="M 155 90 L 180 85 L 235 200" stroke-width="6" fill="none" />
+    <!-- 2. OUTER DEFENSE SHIELD (Hexagonal Frame) -->
+    <path d="M 250 85 L 370 145 L 370 265 L 250 425 L 130 265 L 130 145 Z" stroke-width="3.5" fill="#0C101A" fill-opacity="0.9" />
+    <path d="M 250 115 L 340 160 L 340 250 L 250 375 L 160 250 L 160 160 Z" stroke-width="1.8" opacity="0.6" />
+    <line x1="250" y1="85" x2="250" y2="425" stroke-width="1.8" opacity="0.7" />
 
-    <path d="M 265 210 L 345 90 L 310 120 L 280 185" stroke-width="8" fill="#0A0E17" fill-opacity="0.9" />
-    <path d="M 345 90 L 320 85 L 265 200" stroke-width="6" fill="none" />
+    <!-- 3. SAMURAI KABUTO HORNS (The Winged Crest) -->
+    <path d="M 235 220 L 135 95 L 175 75 L 220 165 Z" stroke-width="3.5" fill="#111624" fill-opacity="0.95" />
+    <line x1="145" y1="102" x2="225" y2="205" stroke-width="1.5" opacity="0.6" />
 
-    <!-- Central Horn Crest Diamond (Maedate) -->
-    <polygon points="250,175 268,205 250,230 232,205" stroke-width="6" fill="#130810" />
-    <polygon points="250,188 258,205 250,218 242,205" stroke-width="3" fill="url(#neonCrimson)" />
+    <path d="M 265 220 L 365 95 L 325 75 L 280 165 Z" stroke-width="3.5" fill="#111624" fill-opacity="0.95" />
+    <line x1="355" y1="102" x2="275" y2="205" stroke-width="1.5" opacity="0.6" />
 
-    <!-- 4. HELMET BROW & VISOR (Menpo / Forehead Plate) -->
-    <path d="M 195 215 L 250 240 L 305 215" stroke-width="8" fill="none" />
-    
-    <!-- Mask / Cheek Plate Left (Fukigaeshi Wing) -->
-    <path d="M 195 215 L 135 255 L 165 315 L 205 260" stroke-width="7" fill="#0A0E17" fill-opacity="0.9" />
-    <line x1="145" y1="265" x2="175" y2="305" stroke-width="4" opacity="0.6" />
+    <polygon points="250,185 268,205 250,225 232,205" stroke-width="2.5" fill="#FF2A5F" />
+    <polygon points="250,193 258,205 250,217 242,205" stroke-width="1.5" fill="#07090E" />
 
-    <!-- Mask / Cheek Plate Right (Fukigaeshi Wing) -->
-    <path d="M 305 215 L 365 255 L 335 315 L 295 260" stroke-width="7" fill="#0A0E17" fill-opacity="0.9" />
-    <line x1="355" y1="265" x2="325" y2="305" stroke-width="4" opacity="0.6" />
+    <!-- 4. CHEEK GUARDS / FLARED WINGS (Fukigaeshi) -->
+    <path d="M 195 240 L 115 285 L 150 355 L 205 295 Z" stroke-width="3" fill="#111624" fill-opacity="0.9" />
+    <line x1="130" y1="295" x2="165" y2="345" stroke-width="1.8" opacity="0.6" />
 
-    <!-- 5. LOWER VISOR / CHIN GUARD (Surgical Point) -->
-    <path d="M 205 260 L 250 310 L 295 260 L 250 280 Z" stroke-width="7" fill="#130810" />
-    <line x1="250" y1="280" x2="250" y2="310" stroke-width="4" />
+    <path d="M 305 240 L 385 285 L 350 355 L 295 295 Z" stroke-width="3" fill="#111624" fill-opacity="0.9" />
+    <line x1="370" y1="295" x2="335" y2="345" stroke-width="1.8" opacity="0.6" />
+
+    <!-- 5. WARRIOR FACE MASK / CHIN SHIELD (Menpo) -->
+    <path d="M 195 240 L 250 270 L 305 240" stroke-width="3.5" />
+    <path d="M 205 295 L 250 365 L 295 295" stroke-width="3.5" fill="#111624" fill-opacity="0.9" />
+    <line x1="250" y1="270" x2="250" y2="365" stroke-width="2" />
 
   </g>
 </svg>
