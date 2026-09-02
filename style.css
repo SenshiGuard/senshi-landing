@@ -209,42 +209,50 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
   z-index: 100;
   background: rgba(7, 9, 14, 0.85);
-  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
-  transition: all 0.3s ease;
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 84px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   color: var(--text-primary);
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.02);
 }
 
 .logo-icon-wrap {
-  width: 38px;
-  height: 38px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 51, 102, 0.1);
-  border: 1px solid rgba(255, 51, 102, 0.3);
-  border-radius: var(--radius-sm);
-  padding: 4px;
+  border: 1.5px solid rgba(255, 51, 102, 0.4);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  box-shadow: 0 0 16px rgba(255, 51, 102, 0.25);
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover .logo-icon-wrap {
+  box-shadow: 0 0 24px rgba(255, 51, 102, 0.45);
+  border-color: var(--accent-crimson);
 }
 
 .logo-icon-wrap img, .logo-icon-wrap svg {
@@ -255,20 +263,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand-title {
   font-family: var(--font-sans);
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.03em;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .kanji-tag {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--accent-crimson);
-  background: rgba(255, 51, 102, 0.12);
-  padding: 2px 6px;
-  border-radius: 4px;
+  background: rgba(255, 51, 102, 0.15);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  padding: 3px 8px;
+  border-radius: 6px;
   font-weight: 700;
 }
 
@@ -299,7 +308,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-  padding-top: 150px;
+  padding-top: 60px;
   padding-bottom: 70px;
   text-align: center;
   position: relative;
